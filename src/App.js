@@ -1,8 +1,9 @@
 import React from 'react';
 import { createMuiTheme, MuiThemeProvider  } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
 
 import "./App.css"
+import Header from './common/Header';
+import Home from './home';
 
 const theme = createMuiTheme({
   palette: {
@@ -18,13 +19,9 @@ const theme = createMuiTheme({
 function App() {
   return (
     <MuiThemeProvider theme={theme}>
-    <AppBar position="static" color="primary">
-        <div className="header">
-          <p className="title">Lista de compras</p>
-        </div>
-    </AppBar>
       <div className="App">
-        <h1>APP</h1>
+        <Header/>
+        <Home/>
       </div>
     </MuiThemeProvider>
   );
