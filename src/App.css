@@ -1,18 +1,25 @@
 .title {
-	font-size: 22px;
-	font-weight: bold;
-	text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
 }
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .header {
-	padding: 0 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header svg {
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 a,
 a:hover {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }

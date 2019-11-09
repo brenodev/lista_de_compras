@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Header from "./common/Header"
 import Home from "./home/Home"
 import CreateList from "./common/createList/CreateList"
+import CreateListItem from "./common/createList/createListItem"
 
 
 const Routes = () => {
@@ -13,6 +14,7 @@ const Routes = () => {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/Lista" component={CreateList}/>
+          <Route path="/Item-List" component={CreateListItem} />
         </Switch>
       </React.Fragment>
     </BrowserRouter>
