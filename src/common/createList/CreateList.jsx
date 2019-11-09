@@ -1,5 +1,6 @@
 import React from "react" 
-import { TextField, MenuItem, Grid, InputAdornment } from "@material-ui/core"
+import { TextField, MenuItem, Grid, InputAdornment, Button } from "@material-ui/core"
+import "./CreateList.css"
 
 const units = ["Quilo", "Litro", "Unidade"]
 
@@ -8,7 +9,7 @@ const CreateList = props => {
     <div className="page-container">
       <form className="form-container">
         <Grid container>
-          <Grid item xs={2}>
+          <Grid item xs={12}>
             <TextField 
               required
               label="Lista"
@@ -19,7 +20,7 @@ const CreateList = props => {
               variant="outlined"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12}>
             <TextField 
               required
               label="Produto"
@@ -30,7 +31,7 @@ const CreateList = props => {
               variant="outlined"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12}>
             <TextField 
               required
               label="Quantidade"
@@ -41,7 +42,7 @@ const CreateList = props => {
               variant="outlined"
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12}>
             <TextField
               select 
               required
@@ -57,7 +58,7 @@ const CreateList = props => {
             ))}
             </TextField>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={12}>
             <TextField 
               required
               label="Preço"
@@ -70,6 +71,9 @@ const CreateList = props => {
                 startAdornment: <InputAdornment position="start">R$</InputAdornment>
               }}
             />
+          </Grid>
+          <Grid item xs={12}>
+            <Button variant="outlined" color="secondary">ADICIONAR</Button>
           </Grid>
         </Grid>
       </form>
