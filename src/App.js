@@ -2,8 +2,7 @@ import React from 'react';
 import { createMuiTheme, MuiThemeProvider  } from '@material-ui/core/styles';
 
 import "./App.css"
-import Header from './common/Header';
-import Home from './home';
+import Routes from './routes';
 
 const theme = createMuiTheme({
   palette: {
@@ -20,8 +19,7 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <div className="App">
-        <Header/>
-        <Home/>
+        <Routes />
       </div>
     </MuiThemeProvider>
   );
