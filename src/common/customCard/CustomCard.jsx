@@ -1,6 +1,6 @@
 import React from "react"
 import { Card, CardActionArea, CardContent, CardActions, Divider } from '@material-ui/core';
-
+import PropTypes from "prop-types"
 import "./CustomCard.css"
 const CustomCard = props => {
   return (
@@ -22,6 +22,12 @@ const CustomCard = props => {
         </Card>
       </div>
   )
+}
+
+CustomCard.propTypes = {
+  containerClass: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+  footer: PropTypes.element
 }
 
 export default CustomCard

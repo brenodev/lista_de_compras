@@ -1,5 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import PropTypes from "prop-types"
 
 const ListItem = props => {
   return(
@@ -8,6 +9,11 @@ const ListItem = props => {
       <p>{props.text}</p>
     </div>
   )
+}
+
+ListItem.propTypes = {
+  icon: PropTypes.object.isRequired,
+  text: PropTypes.string.isRequired
 }
 
 
