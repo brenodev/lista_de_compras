@@ -7,3 +7,9 @@
 .header {
 	padding: 0 20px;
 }
+
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}

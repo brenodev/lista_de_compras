@@ -9,7 +9,9 @@ const List = props => {
   return (
     <CustomCard 
         containerClass="list-container" 
-        footer={ <ListFooter/> }>
+        footer={ <ListFooter/> }
+        link="/lista"
+        >
         <div>
             <p className="title">Mês</p>
             <div className="list-card-body">

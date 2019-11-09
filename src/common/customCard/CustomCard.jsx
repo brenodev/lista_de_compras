@@ -1,10 +1,12 @@
 import React from "react"
 import { Card, CardActionArea, CardContent, CardActions, Divider } from '@material-ui/core';
 import PropTypes from "prop-types"
+import { Link } from "react-router-dom"
 import "./CustomCard.css"
 const CustomCard = props => {
   return (
     <div className={props.containerClass}>
+      <Link to={props.link}>
         <Card className="card">
           <CardActionArea className="card-action-area">
             <CardContent className="card-content">
@@ -20,6 +22,7 @@ const CustomCard = props => {
             </React.Fragment>
           )}
         </Card>
+      </Link>
       </div>
   )
 }
