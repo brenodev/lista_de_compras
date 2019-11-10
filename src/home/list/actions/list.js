@@ -1,10 +1,10 @@
 export const Types = {
-  Add_PRODUCT: 'Add_PRODUCT'
+  ADD_PRODUCT: 'ADD_PRODUCT'
 }
 
 export const Creators = {
   addProduct: (product, list) => ({
-    type: Types.Add_PRODUCT,
+    type: Types.ADD_PRODUCT,
     product,
     list
   })

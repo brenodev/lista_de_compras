@@ -6,10 +6,10 @@ const initialState = {
 }
 
 
-export default function list(state = initialState, action) {
+export default function list(state=initialState, action) {
   switch(action.type) {
-    case Types.Add_PRODUCT:
-      return {list: action.list, item: [...state.items, action.product]};
+    case Types.ADD_PRODUCT:
+      return {list: action.list, items: [...state.items, action.product]};
       default: 
         return state;
   }

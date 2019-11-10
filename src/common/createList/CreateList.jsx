@@ -6,17 +6,17 @@ import { bindActionCreators } from "redux"
 
 import { Creators as ListActions } from "../../home/list/actions/list"
 
-const CreateList = props => {
-
-  const addProduct = (product, list) => {
+class CreateList extends React.Component {
+  addProduct = (product, list) => {
     this.props.addProduct(product, list)
   } 
-
-  return (
-    <div className="page-container">
-      <CreateListForm addProduct={addProduct}/>
-    </div>
-  )
+  render () {
+    return (
+      <div className="page-container">
+        <CreateListForm addProduct={this.addProduct}/>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = state => ({
