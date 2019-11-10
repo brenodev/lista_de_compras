@@ -11,7 +11,8 @@ class CreateListForm extends React.Component {
     product: "",
     quantity: "",
     unit: "",
-    price: ""
+    price: "",
+    showErrors: false
   }
 
   handleChange = evt => {
@@ -22,9 +23,23 @@ class CreateListForm extends React.Component {
 
   handleSubmit = () => {
    const { list, product, quantity, unit, price } = this.state
-    this.props.addProduct(
-      { product, quantity, unit, price }, list
-    )
+   if(!list || !product || !quantity || !unit ) {
+     this.setState({
+       showErrors: true
+     })
+   } else {
+     this.props.addProduct(
+       { product, quantity, unit, price }, list
+     )
+     this.setState({
+      list : "",
+      product: "",
+      quantity: "",
+      unit: "",
+      price: "",
+      showErrors: false
+     })
+   }
   }
 
 
@@ -42,6 +57,7 @@ class CreateListForm extends React.Component {
                 value={this.state.list}
                 onChange={this.handleChange}
                 variant="outlined"
+                error={!this.state.list && this.state.showErrors}
               />
             </Grid>
             <Grid item xs={12}>
@@ -53,6 +69,7 @@ class CreateListForm extends React.Component {
                 value={this.state.product}
                 onChange={this.handleChange}
                 variant="outlined"
+                error={!this.state.product && this.state.showErrors}
               />
             </Grid>
             <Grid item xs={12}>
@@ -65,6 +82,7 @@ class CreateListForm extends React.Component {
                 value={this.state.quantity}
                 onChange={this.handleChange}
                 variant="outlined"
+                error={!this.state.quantity && this.state.showErrors}
               />
             </Grid>
             <Grid item xs={12}>
@@ -77,6 +95,7 @@ class CreateListForm extends React.Component {
                 value={this.state.unit}
                 onChange={this.handleChange}
                 variant="outlined"
+                error={!this.state.unit && this.state.showErrors}
               >
               {units.map(options => (
                 <MenuItem key={options} value={options}>{options}</MenuItem>
@@ -85,7 +104,6 @@ class CreateListForm extends React.Component {
             </Grid>
             <Grid item xs={12}>
               <TextField 
-                required
                 label="Preço"
                 name="price"
                 className=""
