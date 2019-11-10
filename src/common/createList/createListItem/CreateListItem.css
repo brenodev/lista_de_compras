@@ -1,0 +1,18 @@
+.list-items-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2%;
+}
+.list-item {
+  margin: 5px 0px;
+  max-width: 220px;
+  min-width: 220px;
+}
+
+.list-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

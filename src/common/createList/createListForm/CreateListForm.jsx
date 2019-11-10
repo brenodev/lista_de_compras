@@ -72,11 +72,11 @@ const CreateListForm = props => {
             />
           </Grid>
           <Grid container style={{display: "flex", justifyContent: "space-between"}}>
-            <Grid item xs={5}>
+            <Grid item xs={1}>
               <Button variant="outlined" color="secondary">ADICIONAR</Button>
             </Grid>
-            <Grid item xs={5}>
-              <Link to="/Item-List">
+            <Grid item xs={1}>
+              <Link to="/Item-Lista">
                 <Button variant="outlined" color="primary">
                   Ver Lista
                 </Button>

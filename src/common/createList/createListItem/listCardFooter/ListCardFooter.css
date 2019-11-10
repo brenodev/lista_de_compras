@@ -1,0 +1,15 @@
+.list-card-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #757575;
+}
+
+.list-card-footer-actions {
+  display: flex;
+  width: 50px;
+  justify-content: space-around;
+}

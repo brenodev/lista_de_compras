@@ -13,8 +13,8 @@ const Routes = () => {
         <Header />
         <Switch>
           <Route path="/" exact component={Home}/>
-          <Route path="/Lista" component={CreateList}/>
-          <Route path="/Item-List" component={CreateListItem} />
+          <Route path="/Criar-Lista" component={CreateList}/>
+          <Route path="/Item-Lista" component={CreateListItem} />
         </Switch>
       </React.Fragment>
     </BrowserRouter>

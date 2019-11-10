@@ -10,7 +10,7 @@ const List = props => {
     <CustomCard 
         containerClass="list-container" 
         footer={ <ListFooter/> }
-        link="/lista"
+        link="/Item-Lista"
         >
         <div>
             <p className="title">Mês</p>
