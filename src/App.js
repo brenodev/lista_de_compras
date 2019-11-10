@@ -1,5 +1,7 @@
 import React from 'react';
 import { createMuiTheme, MuiThemeProvider  } from '@material-ui/core/styles';
+import { Provider } from "react-redux"
+import store from "./store"
 
 import "./App.css"
 import Routes from './routes';
@@ -17,11 +19,13 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
-      <div className="App">
-        <Routes />
-      </div>
-    </MuiThemeProvider>
+    <Provider store={store}>
+      <MuiThemeProvider theme={theme}>
+        <div className="App">
+          <Routes />
+        </div>
+      </MuiThemeProvider>
+    </Provider>
   );
 }
 
