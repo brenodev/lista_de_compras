@@ -9,13 +9,13 @@ const ListCardFooter = () => {
       <div className="list-card-footer-actions">
         <FontAwesomeIcon
         icon={faPen}
-        color="#834bff"
-        size="1"
+        color="#009688"
+        size="sm"
         />
         <FontAwesomeIcon
         icon={faTrash}
         color="#834bff"
-        size="1"
+        size="sm"
         />
       </div>
       <p>Total: R$ 50</p>
