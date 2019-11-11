@@ -9,11 +9,11 @@ const List = props => {
   return (
     <CustomCard 
         containerClass="list-container" 
-        footer={ <ListFooter/> }
+        footer={ <ListFooter total={props.total}/> }
         link="/Item-Lista"
         >
         <div>
-            <p className="title">Mês</p>
+            <p className="title">{props.list}</p>
             <div className="list-card-body">
                 <ListItem icon={faShoppingBasket} text="1 Item(s) Restante"/> 
                 <ListItem icon={faCheck}  text="1 Item(s) Restante"/> 
