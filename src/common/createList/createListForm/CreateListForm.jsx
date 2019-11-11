@@ -2,7 +2,7 @@ import React from "react"
 import { TextField, MenuItem, Grid, InputAdornment, Button } from "@material-ui/core"
 import { Link } from 'react-router-dom'
 
-const units = ["Quilo", "Litro", "Unidade"]
+const units = ["Kilo(s)", "Litro(s)", "Unidade(s)"]
 
 
 class CreateListForm extends React.Component {
@@ -32,7 +32,6 @@ class CreateListForm extends React.Component {
        { product, quantity, unit, price }, list
      )
      this.setState({
-      list : "",
       product: "",
       quantity: "",
       unit: "",
