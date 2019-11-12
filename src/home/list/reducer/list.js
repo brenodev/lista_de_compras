@@ -15,12 +15,23 @@ export default function list(state=initialState, action) {
         list: action.list,
         items: [
           ...state.items,
-          {...action.product, total: getItemTotal(action.product), id: uuidv1()}
+          {
+            ...action.product,
+            total: getItemTotal(action.product),
+            id: uuidv1(),
+            checked: false
+          }
         ]};
     case Types.DELETE_PRODUCT:
       return {
         ...state,
         items: state.items.filter(item => item.id !== action.productId)
+      }
+    case Types.TOGGLE_PRODUCT:
+      // achar item para ser modificado
+      return {
+        ...state,
+        items: toggleItem(state.items, action.productId)
       }
       default: 
         return state;
@@ -30,6 +41,15 @@ export default function list(state=initialState, action) {
 function getItemTotal( product) {
   return product.price * product.quantity
 } 
+
+function toggleItem(items, productId) {
+  const index = items.findIndex(item => item.id === productId)
+  return [
+    ...items.slice(0, index),// todos os items antes do item a ser modificado
+    {...items[index], checked: !items[index].checked},// item atualizado
+    ...items.slice(index + 1) // todos os items do array que estão depois do item a ser modificado
+  ];
+}
 
 // para otimizar o selector
 export const getListTotal = createSelector (
