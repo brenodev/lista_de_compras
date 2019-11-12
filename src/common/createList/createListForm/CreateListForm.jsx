@@ -57,6 +57,7 @@ class CreateListForm extends React.Component {
                 onChange={this.handleChange}
                 variant="outlined"
                 error={!this.state.list && this.state.showErrors}
+                placeholder="Nome da lista"
               />
             </Grid>
             <Grid item xs={12}>
@@ -69,6 +70,7 @@ class CreateListForm extends React.Component {
                 onChange={this.handleChange}
                 variant="outlined"
                 error={!this.state.product && this.state.showErrors}
+                placeholder="Nome do produto"
               />
             </Grid>
             <Grid item xs={12}>
@@ -82,6 +84,7 @@ class CreateListForm extends React.Component {
                 onChange={this.handleChange}
                 variant="outlined"
                 error={!this.state.quantity && this.state.showErrors}
+                placeholder="Quantidade"
               />
             </Grid>
             <Grid item xs={12}>
@@ -95,6 +98,7 @@ class CreateListForm extends React.Component {
                 onChange={this.handleChange}
                 variant="outlined"
                 error={!this.state.unit && this.state.showErrors}
+                placeholder="Selecione unidade, kilo ou litros"
               >
               {units.map(options => (
                 <MenuItem key={options} value={options}>{options}</MenuItem>
@@ -109,9 +113,8 @@ class CreateListForm extends React.Component {
                 value={this.state.price}
                 onChange={this.handleChange}
                 variant="outlined"
-                InputProps={{
-                  startAdornment: <InputAdornment position="start">R$</InputAdornment>
-                }}
+                type="number"
+                placeholder="R$"
               />
             </Grid>
             <Grid container style={{display: "flex", justifyContent: "space-between"}}>
